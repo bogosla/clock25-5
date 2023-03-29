@@ -11,7 +11,7 @@ const App = () => {
     const [breakLength, setBreakLength] = useState(5);
     const [sessionLength, setSessionLength] = useState(25);
     const [sessionBreak, setSessionBreak] = useState(true);
-    const [timeLeft, setTimeLeft] = useState(25 * 60);
+    const [timeLeft, setTimeLeft] = useState(sessionLength * 60);
 
     const idRef = useRef(0);
     const audioRef = useRef();
@@ -40,7 +40,6 @@ const App = () => {
 
     const updateTime = () => {
         setTimeLeft(old => Math.max(0, old - 1));
-        console.log(sessionBreak, breakLength);
         if (timeLeft === 0) {
             setSessionBreak(old => {
                 let newSB = !old;
