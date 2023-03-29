@@ -127,7 +127,7 @@ const App = () => {
             <button id="start_stop" onClick={startStopHandler}>Start / Stop</button>
             <button id="reset" onClick={resetHandler}>Reset</button>
         </div>
-        <audio id="beep" src="http://localhost:3000/beep.mp3" ref={audioRef} />
+        <audio id="beep" src="https://dl.sndup.net/mvtx/negative_beeps-6008.mp3" ref={audioRef} />
     </main>
     </>
   );
